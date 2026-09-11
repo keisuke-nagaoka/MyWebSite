@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../../js/head.js" data-title="Keisuke Nagaoka ポートフォリオ" data-root="../../"></script>
+</head>
+
+<body data-root="../../">
+  <div class="wrapper">
+    <div data-include="partials/header.html"></div>
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">- スクロールゲーム -</h2>
+          <div class="article-body">
+            <p>
+              <img src="/img/personal-projects/icon_pro_1.png" alt="">
+            </p>
+            <p>
+              Go言語を用いて、横スクロール型の2Dアクションゲームを個人開発しました。
+              <br>プレイヤーキャラクターをキーボードで操作し、ステージ上を移動・ジャンプしながら進んでいくシンプルなスクロールゲームです。
+              <br>ゲーム開発にはGo向けの2Dゲームエンジン Ebitengine を使用し、キャラクターの描画・キー入力・座標管理・画面スクロール・当たり判定など、ゲームを構成する基本的な処理を実装しています。
+            </p>
+            <h3>URL</h3>
+            <p>
+              <a href="https://go.keisuke-nagaoka.com/go-game/" target="_blank" rel="noopener">https://go.keisuke-nagaoka.com/go-game/</a>
+            </p>
+            <h3>Go / Ebitengine</h3>
+            <p>
+              開発言語にはGoを使用し、ゲームエンジンとしてEbitengineを採用しました。
+              <br>Ebitengineでは、ゲームの状態更新を行う処理と画面描画を行う処理を分離して実装できます。
+              <br>このゲームでは、キー入力に応じてプレイヤーの座標や移動速度を更新し、そのゲーム状態をもとにキャラクターやステージを画面へ描画しています。
+              <br>このようなゲームループを通して、通常のWebアプリケーションとは異なる、リアルタイムに状態を更新し続けるプログラムの実装を経験しました。
+            </p>
+            <h3>WebAssembly / ブラウザ実行</h3>
+            <p>
+              Goで作成したゲームをブラウザ上でも実行できるよう、WebAssembly（Wasm）向けにビルドしています。
+              <br>これにより、専用の実行ファイルをインストールすることなく、ポートフォリオサイトへアクセスするだけで実際にゲームを操作できるようにしています。
+            </p>
+            <h3>Docker / AWS</h3>
+            <p>
+              WebAssemblyとしてビルドしたゲームをDockerコンテナで配信し、Amazon EC2上で稼働させています。
+              <br>外部からのアクセスはNginxで受け付け、HTTPS経由でゲームを公開しています。
+              <br>ゲームそのものの開発だけでなく、Goによる実装からWebAssemblyへのビルド、Docker化、AWS EC2へのデプロイ、Nginx・HTTPSによるWeb公開まで一通り構築しました。
+            </p>
+            <h3>使用技術</h3>
+            <p>
+              Go / Ebitengine / WebAssembly / HTML / JavaScript / Docker / Amazon EC2 / Nginx / HTTPS
+            </p>
+          </div>
+          <div class="home-link">
+            <a href="../lists/personal-project-template.html">Go言語 一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div data-include="partials/page-top.html"></div>
+    </main>
+    <div data-include="partials/footer.html"></div>
+
+  </div>
+  <script src="../../js/include.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../js/script.js"></script>
+</body>
+</html>

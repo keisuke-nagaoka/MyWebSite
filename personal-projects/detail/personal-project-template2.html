@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../../js/head.js" data-title="Keisuke Nagaoka ポートフォリオ" data-root="../../"></script>
+</head>
+
+<body data-root="../../">
+  <div class="wrapper">
+    <div data-include="partials/header.html"></div>
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">- 問い合わせ管理システム -</h2>
+          <div class="article-body">
+            <p>
+              <img src="/img/personal-projects/icon_pro_2.png" alt="">
+            </p>
+            <p>
+              TypeScript / Node.js / Express / MySQL を用いて個人開発しました。
+              <br>問い合わせの一覧表示・詳細表示・登録・編集・更新などのCRUD機能を実装しています。
+              <br>フロントエンドから直接データベースを操作するのではなく、Expressで構築したREST APIを介してMySQLのデータを取得・登録・更新する構成としています。
+            </p>
+            <h3>URL</h3>
+            <p>
+              <a href="https://node.keisuke-nagaoka.com/inquiry/" target="_blank" rel="noopener">https://node.keisuke-nagaoka.com/inquiry/</a>
+            </p>
+            <h3>API / Express</h3>
+            <p>
+              Expressで問い合わせ情報を操作するAPIエンドポイントを実装し、ブラウザからのHTTPリクエストに応じてMySQLへアクセスします。
+              <br>例えば問い合わせ一覧を表示する際は、フロントエンドからAPIへGETリクエストを送り、ExpressがMySQLから問い合わせデータを取得してJSON形式で返却します。
+              <br>登録や更新についても同様に、POSTやPUTなどのHTTPメソッドを使用してAPIへリクエストを送り、Express側で受け取ったデータをMySQLへ反映する構成です。
+              <br>これにより、画面表示を担当するフロントエンド、業務処理・APIを担当するExpress、データ管理を担当するMySQLという形で役割を分離しています。
+            </p>
+            <h3>TypeScript / Node.js</h3>
+            <p>バックエンドはNode.jsで実行し、開発言語にはTypeScriptを採用しました。JavaScriptに型情報を加えられるTypeScriptを使用することで、問い合わせデータやAPI処理の型を明確にし、開発時の型チェックによって実装ミスを検出しやすい構成としています。</p>
+            <h3>データベース</h3>
+            <p>
+              データベースには Amazon RDS for MySQL を使用しています。アプリケーションを稼働させるEC2とデータベースを分離し、ExpressからRDSへ接続して問い合わせデータを管理しています。
+              <br>RDSへの接続はインターネットへ直接公開せず、EC2から必要なMySQL通信のみを許可するセキュリティグループ構成としています。また、アプリケーションからRDSへの接続にはTLSを使用しています。
+            </p>
+            <h3>Docker / AWS</h3>
+            <p>
+              アプリケーションはDockerイメージとして構築し、Amazon EC2上のDockerコンテナとして稼働させています。
+              <br>外部からのHTTPSアクセスはNginxで受け付け、リバースプロキシによってExpressコンテナへ転送しています。
+            </p>
+          </div>
+          <div class="home-link">
+            <a href="../lists/personal-project-template2.html">Node.js + TypeScript一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div data-include="partials/page-top.html"></div>
+    </main>
+    <div data-include="partials/footer.html"></div>
+
+  </div>
+  <script src="../../js/include.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../../js/script.js"></script>
+</body>
+</html>

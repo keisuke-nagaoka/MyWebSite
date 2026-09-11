@@ -537,6 +537,25 @@ img {
     margin-bottom: 30px;
   }
 
+  /* Personal Projects */
+  .personal-projects-name {
+    font-size: 12px;
+  }
+
+  .personal-projects-info {
+    margin-top: 3px;
+  }
+
+  .personal-projects-list {
+    justify-content: space-between;
+  }
+
+  .personal-projects-item {
+    flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
   /* Skill */
   .skill-list {
     display: block;
