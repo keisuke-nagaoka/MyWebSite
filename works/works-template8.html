@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="../js/head.js" data-title="Keisuke Nagaoka ポートフォリオ" data-root="../"></script>
+</head>
+
+<body data-root="../">
+  <div class="wrapper">
+    <div data-include="partials/header.html"></div>
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">- 自転車イベント通過人数管理システム -</h2>
+          <div class="article-body">
+            <p>
+              <img src="/img/works/works-dummy-thumb.jpg" alt="">
+            </p>
+            <p>
+              自転車イベントにおける各地点通過状況をイベント主催者がリアルタイム管理できるシステムです。
+            </p>
+            <!-- <h3>URL</h3>
+            <p><a href="https://chopper-web.com/webruncert/" target="_blank" rel="noopener">https://chopper-web.com/webruncert/</a></p> -->
+            <h3>担当</h3>
+            <p>詳細設計・開発・運用保守</p>
+            <h3>使用技術</h3>
+            <p>PHP, TypeScript, MySQL, Laravel（バックエンド）、Vue.js（フロントエンド）</p>
+            <h3>ターゲット</h3>
+            <p>イベント主催者</p>
+            <h3>システムについて</h3>
+            <p>
+              データ管理（Admin）と閲覧およびリタイア登録（イベント主催者が操作）を完全に分離し、ユーザー体験の向上を図る。複数地点の通過状況をリアルタイムで確認することができ、コースを誤った参加者や各地点ごとに想定通過人数に対して、実際の通過状況を確認することが可能。
+            </p>
+            <p>
+              特に大会開催当日は主催者が複数名で同時に利用することを想定し、非同期通信を採用。原則、クリック操作のみで完結する仕様にし、個人状況を確認したい場合は検索機能を利用する形としています。
+            </p>
+          </div>
+          <div class="home-link">
+            <a href="../#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div data-include="partials/page-top.html"></div>
+    </main>
+    <div data-include="partials/footer.html"></div>
+
+  </div>
+  <script src="../js/include.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
